@@ -1,0 +1,44 @@
+<div class="container mt-4">
+  <div class="p-card">
+    <h2>{{ isEditMode ? 'Edit Barang' : 'Tambah Barang' }}</h2>
+    <form (ngSubmit)="createOrUpdateBarang()" #barangForm="ngForm">
+      <div class="p-fluid p-formgrid p-grid">
+        <div class="p-field p-col-12 p-md-6">
+          <label for="nama_barang">Nama Barang:</label>
+          <input type="text" id="nama_barang" [(ngModel)]="barang.nama_barang" name="nama_barang" required pInputText />
+        </div>
+
+        <div class="p-field p-col-12 p-md-6">
+          <label for="stok">Stok:</label>
+          <input type="number" id="stok" [(ngModel)]="barang.stok" name="stok" required pInputText />
+        </div>
+
+        <div class="p-field p-col-12 p-md-6">
+          <label for="jumlah_terjual">Jumlah Terjual:</label>
+          <input type="number" id="jumlah_terjual" [(ngModel)]="barang.jumlah_terjual" name="jumlah_terjual" required
+            pInputText />
+        </div>
+
+        <div class="p-field p-col-12 p-md-6">
+          <label for="tanggal_transaksi">Tanggal Transaksi:</label>
+          <input type="date" pInputText id="tanggal_transaksi" [(ngModel)]="barang.tanggal_transaksi"
+            name="tanggal_transaksi" required />
+        </div>
+
+        <div class="p-field p-col-12 p-md-6">
+          <label for="jenis_barang">Jenis Barang:</label>
+          <input type="text" id="jenis_barang" [(ngModel)]="barang.jenis_barang" name="jenis_barang" required
+            pInputText />
+        </div>
+
+        <div class="p-field p-col-12">
+          <div class="button-container">
+            <p-button label="Kembali" type="button" (click)="back()" class="p-button p-component mt-3" />
+            <p-button label="{{ isEditMode ? 'Update Barang' : 'Tambah Barang' }}" type="submit"
+              class="p-button p-component mt-3" />
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

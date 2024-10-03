@@ -1,0 +1,9 @@
+footer {
+  .list-inline-item a {
+    &:hover {
+      color: #f8f9fa;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+  }
+}

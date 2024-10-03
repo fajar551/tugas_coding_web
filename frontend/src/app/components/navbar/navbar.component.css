@@ -1,0 +1,15 @@
+.navbar {
+  .nav-link {
+    &:hover {
+      color: #f8f9fa;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+  }
+
+  .navbar-toggler {
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
